@@ -2,7 +2,7 @@ const PersonalInfo = () => {
     return (
         <div className="PersonalInfoForm">
             <label htmlFor="nameInput">
-                <input type="text" id="nameInput" placeholder="name"></input>
+                <input type="text" id="nameInput" placeholder="John Human"></input>
             </label>
             <label htmlFor="titleInput">
                 <input type="text" id="titleInput" placeholder="title"></input>
