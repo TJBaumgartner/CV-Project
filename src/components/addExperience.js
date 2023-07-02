@@ -1,6 +1,6 @@
 //import { createElement } from "react";
 
-const AddForm = (props) =>{
+const AddExperienceForm = (props) =>{
     const inputData =[{
         id:0,
         input: "companyInput",
@@ -8,7 +8,7 @@ const AddForm = (props) =>{
     }, {
         id:1,
         input: "positionInput",
-        placeholder: "Gamer"
+        placeholder: "Subway"
     }, {
         id:2,
         input: "workStart",
@@ -20,8 +20,8 @@ const AddForm = (props) =>{
     }, {
         id:4,
         input: "jobDescription",
-        placeholder: "Worked Job"
-    }]
+        placeholder: "Made Subs"
+    }];
     const formItems = inputData.map(data =>
         <label key={data.id} htmlFor={data.input}>
             <input type="text" id={data.input} placeholder={data.placeholder}></input>
@@ -29,4 +29,4 @@ const AddForm = (props) =>{
     );
     return <div className="workGroup">{formItems}</div>;
 }
-export default AddForm;
+export default AddExperienceForm;

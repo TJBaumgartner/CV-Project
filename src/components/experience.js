@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AddForm from './addForm';
+import AddExperienceForm from './addExperience';
 const WorkExperience = () => {
 
     const [components, setComponents] = useState(["sample component"]);
@@ -11,7 +11,7 @@ const WorkExperience = () => {
     return (
         <div className="WorkExperienceForm">
             <div>
-                {components.map((item, i) => ( <AddForm text={item} key={i}/> ))} 
+                {components.map((item, i) => ( <AddExperienceForm text={item} key={i}/> ))} 
                 <button id="submitButton" onClick={addComponent}>Add</button>
             </div>
         </div>
