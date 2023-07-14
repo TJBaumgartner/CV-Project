@@ -1,26 +1,53 @@
-const PersonalInfo = () => {
+const PersonalInfo = ({handleChange, personalDetails, handlePersonalSubmit}) => {
     return (
-        <div className="PersonalInfoForm">
-            <label htmlFor="nameInput">
-                <input type="text" id="nameInput" placeholder="Name" style={{width: "100%"}}></input>
+        <form className="PersonalInfoForm" onSubmit={handlePersonalSubmit}>
+            <label>
+                Name
+                <input
+                type="text"
+                name="name"
+                value={personalDetails.name}
+                onChange={handleChange}
+                />
             </label>
-            <label htmlFor="titleInput">
-                <input type="text" id="titleInput" placeholder="Title" style={{width: "100%"}}></input>
+            <label>
+                Title
+                <input
+                type="text"
+                name="title"
+                value={personalDetails.title}
+                onChange={handleChange}
+                />
             </label>
-            <label htmlFor="numberInput">
-                <input type="text" id="numberInput" placeholder="Phone" style={{width: "100%"}}></input>
+            <label>
+                Phone
+                <input
+                type="text"
+                name="phone"
+                value={personalDetails.phone}
+                onChange={handleChange}
+                />
             </label>
-            <label htmlFor="emailInput">
-                <input type="text" id="emailInput" placeholder="Email" style={{width: "100%"}}></input>
+            <label>
+                Email
+                <input
+                type="text"
+                name="email"
+                value={personalDetails.email}
+                onChange={handleChange}
+                />
             </label>
-            <label htmlFor="locationInput">
-                <input type="text" id="locationInput" placeholder="Country" style={{width: "100%"}}></input>
+            <label>
+                Location
+                <input
+                type="text"
+                name="location"
+                value={personalDetails.location}
+                onChange={handleChange}
+                />
             </label>
-            <label htmlFor="descriptionInput">
-                <textarea type="text" id="descriptionInput" placeholder="Description..." style={{height: "100px",
-            width: "100%", resize: "none"}}></textarea>
-            </label>
-        </div>
-    )
+            <button type="submit">Submit</button>
+        </form>
+        )
 }
 export default PersonalInfo;
