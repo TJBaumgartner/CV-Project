@@ -1,4 +1,23 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
 .PersonalInfoForm{
+  width: 30%;
   display: flex;
   flex-direction: column;
+  gap: 5px;
+}
+.educationDiv{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.experienceDiv{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
