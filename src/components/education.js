@@ -1,6 +1,6 @@
 const EducationInfo = ({handleEducationChange, handleEducationSubmit, educationData}) => {
     return (
-        <form className="PersonalInfoForm" onSubmit={handleEducationSubmit}>
+        <form className="EducationForm" onSubmit={handleEducationSubmit}>
             <label>
                 School
                 <input
