@@ -1,13 +1,13 @@
-const PersonalInfo = ({handleChange, personalDetails, handlePersonalSubmit}) => {
+const PersonalInfo = ({handlePersonalChange, personalDetails}) => {
     return (
-        <form className="PersonalInfoForm" onSubmit={handlePersonalSubmit}>
+        <form className="PersonalInfoForm">
             <label>
                 Name
                 <input
                 type="text"
                 name="name"
                 value={personalDetails.name}
-                onChange={handleChange}
+                onChange={(e)=>handlePersonalChange(e)}
                 />
             </label>
             <label>
@@ -16,7 +16,7 @@ const PersonalInfo = ({handleChange, personalDetails, handlePersonalSubmit}) => 
                 type="text"
                 name="title"
                 value={personalDetails.title}
-                onChange={handleChange}
+                onChange={(e)=>handlePersonalChange(e)}
                 />
             </label>
             <label>
@@ -25,7 +25,7 @@ const PersonalInfo = ({handleChange, personalDetails, handlePersonalSubmit}) => 
                 type="text"
                 name="phone"
                 value={personalDetails.phone}
-                onChange={handleChange}
+                onChange={(e)=>handlePersonalChange(e)}
                 />
             </label>
             <label>
@@ -34,7 +34,7 @@ const PersonalInfo = ({handleChange, personalDetails, handlePersonalSubmit}) => 
                 type="text"
                 name="email"
                 value={personalDetails.email}
-                onChange={handleChange}
+                onChange={(e)=>handlePersonalChange(e)}
                 />
             </label>
             <label>
@@ -43,10 +43,9 @@ const PersonalInfo = ({handleChange, personalDetails, handlePersonalSubmit}) => 
                 type="text"
                 name="location"
                 value={personalDetails.location}
-                onChange={handleChange}
+                onChange={(e)=>handlePersonalChange(e)}
                 />
             </label>
-            <button type="submit">Submit</button>
         </form>
         )
 }

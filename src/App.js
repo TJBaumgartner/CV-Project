@@ -2,7 +2,9 @@ import './App.css';
 import React, { useState } from 'react';
 import uniqid from "uniqid";
 import PersonalInfo from './components/personal';
-import DisplayCV from './components/CV.JS';
+import DisplayCV from './components/displaycv.js';
+import EducationInfo from './components/education';
+
 function App() {
 
   const [personalDetails, setPersonalDetails] = useState({
@@ -12,24 +14,51 @@ function App() {
     email: '',
     location: '',
   });
-  const [education, setEducation] = useState([]);
-  const [experiennce, setExperience] = useState([]);
+  const [experiennceList, setExperience] = useState([]);
+  const [educationList, setEducationList] = useState([]);
+  const [educationData, setEducationData] = useState({
+    school: '',
+    study: '',
+    time: '',
+    id: uniqid()
+  })
 
-  function handleChange(evt) {
+  function handlePersonalChange(evt) {
     const value = evt.target.value;
     setPersonalDetails({
       ...personalDetails,
       [evt.target.name]: value
     });
   }
-  function handlePersonalSubmit(evt){
-    console.log(personalDetails);
+
+  function handleEducationSubmit(evt){
     evt.preventDefault();
+    setEducationData({
+      school: '',
+      study: '',
+      time: '',
+      id: uniqid()
+    })
+    setEducationList([...educationList, educationData])
+    console.log(educationList)
+  }
+
+  function handleEducationChange(evt){
+    const value = evt.target.value
+    setEducationData({
+      ...educationData,
+      [evt.target.name]: value
+    })
+  }
+  function removeEducation(id){
+    const filterTask = educationList.filter(a => a.id !== id);
+    setEducationList(filterTask);
   }
   return (
     <div>
-      <PersonalInfo handlePersonalSubmit={handlePersonalSubmit} handleChange={handleChange} personalDetails={personalDetails}></PersonalInfo>
-      <DisplayCV personalDetails={personalDetails}></DisplayCV>
+      <PersonalInfo handlePersonalChange={handlePersonalChange} personalDetails={personalDetails}></PersonalInfo>
+      <EducationInfo educationData={educationData} handleEducationSubmit={handleEducationSubmit} handleEducationChange={handleEducationChange}></EducationInfo>
+      <DisplayCV removeEducation={removeEducation} personalDetails={personalDetails} educationList={educationList}></DisplayCV>
     </div>
   );
 }
