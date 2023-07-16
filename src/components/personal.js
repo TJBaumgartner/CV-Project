@@ -46,6 +46,14 @@ const PersonalInfo = ({handlePersonalChange, personalDetails}) => {
                 onChange={(e)=>handlePersonalChange(e)}
                 />
             </label>
+            <label>
+                description
+                <textarea
+                name="description"
+                value={personalDetails.description}
+                onChange={(e)=>handlePersonalChange(e)}
+                />
+            </label>
         </form>
         )
 }

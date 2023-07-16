@@ -9,11 +9,12 @@ import ExperienceInfo from './components/experience';
 function App() {
   //Personal
   const [personalDetails, setPersonalDetails] = useState({
-    name: '',
-    title: '',
-    phone: '',
-    email: '',
-    location: '',
+    name: 'John Doe',
+    title: 'Worker',
+    phone: '123456789',
+    email: 'email@gmail.com',
+    location: 'United States',
+    description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
   });
   
     function handlePersonalChange(evt) {
@@ -96,11 +97,15 @@ function App() {
   }
   //UI
   return (
-    <div>
+    <div className='uiContainer'>
+      <div className='formContainer'>
       <PersonalInfo handlePersonalChange={handlePersonalChange} personalDetails={personalDetails}></PersonalInfo>
       <EducationInfo educationData={educationData} handleEducationSubmit={handleEducationSubmit} handleEducationChange={handleEducationChange}></EducationInfo>
       <ExperienceInfo experienceData={experienceData} handleExperienceSubmit={handleExperienceSubmit} handleExperienceChange={handleExperienceChange}></ExperienceInfo>
-      <DisplayCV removeEducation={removeEducation} personalDetails={personalDetails} educationList={educationList}></DisplayCV>
+      </div>
+      <div className='cvContainer'>
+      <DisplayCV removeEducation={removeEducation} personalDetails={personalDetails} educationList={educationList} experienceList={experienceList} removeExperience={removeExperience}></DisplayCV>
+      </div>
     </div>
   );
 }

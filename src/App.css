@@ -4,20 +4,42 @@
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
 }
+.uiContainer{
+  display: flex;
+}
+.formContainer{
+  width: 50%;
+}
+.cvContainer{
+  width: 50%;
+  background-color: green;
+}
+.DisplayCV{
+  background-color: green;
+}
+.personalGroup{
+  background-color: red;
+}
 .PersonalInfoForm{
   width: 30%;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.educationDiv{
+.EducationForm{
   width: 20%;
   display: flex;
   flex-direction: column;
 }
-.experienceDiv{
+.ExperienceForm{
   width: 20%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.educationContainer{
+  padding-top: 30px;
+}
+.experienceContainer{
+  padding-top: 30px;
 }

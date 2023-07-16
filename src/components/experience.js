@@ -24,7 +24,7 @@ const ExperienceInfo = ({handleExperienceChange, handleExperienceSubmit, experie
                 <input
                 type="text"
                 name="tasks"
-                value={experienceData.tassks}
+                value={experienceData.tasks}
                 onChange={(e)=>handleExperienceChange(e)}
                 />
             </label>

@@ -1,15 +1,17 @@
 const DisplayCV = ({personalDetails, educationList, removeEducation, experienceList, removeExperience}) => {
     // console.log(educationList)
     return (
-        <div>
+        <div className="DisplayCV">
             <div className="personalGroup">
                 <h1>{personalDetails.name}</h1>
                 <h2>{personalDetails.title}</h2>
                 <p>{personalDetails.phone}</p>
                 <p>{personalDetails.email}</p>
                 <p>{personalDetails.location}</p>
+                <p>{personalDetails.description}</p>
             </div>
-            <div>
+            <div className="educationContainer">
+                <h1>Education</h1>
                 {educationList.map((education) => {
                     return <div key={education.id} className="educationGroup">
                                 <div>{education.school}</div> 
@@ -19,7 +21,8 @@ const DisplayCV = ({personalDetails, educationList, removeEducation, experienceL
                             </div>
                 })}
             </div>
-            <div>
+            <div className="experienceContainer">
+                <h1>Experience</h1>
                 {experienceList.map((experience) => {
                     return <div key={experience.id} className="experienceGroup">
                                 <div>{experience.company}</div> 
