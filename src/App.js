@@ -9,9 +9,9 @@ import ExperienceInfo from './components/experience';
 function App() {
   //Personal
   const [personalDetails, setPersonalDetails] = useState({
-    name: 'John Doe',
+    name: 'John Human',
     title: 'Worker',
-    phone: '123456789',
+    phone: '(123)-456-7890',
     email: 'email@gmail.com',
     location: 'United States',
     description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
